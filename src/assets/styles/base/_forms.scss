@@ -1,0 +1,228 @@
+::placeholder {
+  color: $input-placeholder-color;
+}
+
+.input-field {
+  &__input {
+    position: relative;
+  }
+
+  &.error {
+    .input,
+    .textarea {
+      border-color: $error;
+      padding-right: 5rem;
+    }
+
+    .input-notification {
+      color: $error--thin;
+
+      &__icon {
+        fill: $error--thin;
+      }
+    }
+  }
+  
+  &.warning {
+    .input,
+    .textarea {
+      border-color: $warning;
+      padding-right: 5rem;
+    }
+
+    .input-notification {
+      color: $warning--thin;
+
+      &__icon {
+        fill: $warning--thin;
+      }
+    }
+  }
+
+  &.success {
+    .input,
+    .textarea {
+      border-color: $success;
+      padding-right: 5rem;
+    }
+
+    .input-notification {
+      color: $success--thin;
+
+      &__icon {
+        fill: $success--thin;
+      }
+    }
+  }
+
+  .input-notification {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: .5rem;
+
+    &__icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      position: absolute;
+      right: 2.4rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+input.input,
+textarea.textarea {
+  padding: 1.6rem 2.4rem;
+  width: 100%;
+  font-size: $input-font-size;
+  border: 2px solid $input-border-normal;
+  outline: none;
+  border-radius: $input-border-radius;
+  background: $white;
+  font-family: $font-base-stack;
+  transition: all .3s;
+  color: $input-typing-color;
+
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
+  &:focus {
+    border-color: $input-border-focus;
+    //box-shadow: $input-focus-shadow;
+  }
+}
+
+textarea.textarea {
+  resize: vertical;
+}
+
+button,
+button:focus {
+  outline: none;
+  font-family: $font-base-stack;
+  cursor: pointer;
+}
+
+label {
+  user-select: none;
+  cursor: pointer;
+  font-size: $input-font-size;
+
+  span {
+    color: $primary-color;
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+/* Checkbox */
+.checkbox-label {
+  &__main {
+    font-size: $input-font-size;
+    cursor: pointer;
+    color: $font-base-color;
+    padding: 0 0 0 2.5rem;
+    position: relative;
+    margin: 0;
+    user-select: none;
+    line-height: 1.2;
+    display: block;
+    border-radius: 50%;
+    
+    min-width: 1.8rem;
+    min-height: 1.8rem;
+
+    &::before {
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      position: absolute;
+      left: 0;
+      top: .1px;
+      background: $primary-color;
+      border-radius: 50%;
+    }
+  }
+
+  &__input {
+    @include hide-element;
+  }
+
+  &__input:checked + .checkbox-label__main::before {
+    background-color: $primary-color;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDFMMy44MTI1IDdMMSA0LjI3MjczIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: .9rem;
+  }
+
+  &__input[disabled] + .checkbox-label__main {
+    opacity: .5;
+    cursor: default;
+  }
+}
+/* Checkbox */
+
+/* Radio */
+.radio-label {
+  &__main {
+    font-size: $input-font-size;
+    cursor: pointer;
+    color: $font-base-color;
+    height: 100%;
+    padding: 0 0 0 2.5rem;
+    position: relative;
+    margin: 0;
+    user-select: none;
+    line-height: 1.2;
+    display: block;
+    
+    min-width: 1.6rem;
+    min-height: 1.6rem;
+
+    &::before {
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      border: 1px solid #e7e7e7;
+      position: absolute;
+      left: 0;
+      top: .1rem;
+      border-radius: 50%;
+      background: $white;
+    }
+
+    &::after {
+      content: "";
+      width: .8rem;
+      height: .8rem;
+      position: absolute;
+      left: .4rem;
+      top: .5rem;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+  }
+
+  &__input {
+    @include hide-element;
+  }
+
+  &__input:checked + .radio-label__main::before {
+    //border-color: $primary-color;
+  }
+
+  &__input:checked + .radio-label__main::after {
+    background-color: $primary-color;
+  }
+
+  &__input[disabled] + .radio-label__main {
+    opacity: .5;
+    cursor: default;
+  }
+}
+/* Radio */

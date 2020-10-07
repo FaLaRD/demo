@@ -1,0 +1,11 @@
+.header {
+  background: $primary-color;
+  box-shadow: 0 .3rem 1.2rem rgba($black, .08);
+  padding: 1.5rem 0;
+  margin-bottom: 2.5rem;
+  color: $white;
+
+  p {
+    margin: 0;
+  }
+}

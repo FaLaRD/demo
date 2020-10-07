@@ -1,0 +1,62 @@
+.section {
+  padding: 4rem 0;
+
+  @media (min-width: $md) {
+    padding: 3rem 0 5rem;
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__header {
+    text-align: center;
+
+    @media (min-width: $sm) {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    margin: 0 0 1.5rem;
+    position: relative;
+    line-height: 1.2;
+    color: $headings-color;
+    word-break: break-all;
+    font-weight: 500;
+    
+    @media (min-width: $sm) {
+      margin: 0;
+    }
+    
+    @media (min-width: $md) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__promo {
+    text-align: center;
+    font-size: 1.8rem;
+
+    p {
+      margin: 2rem 0;
+    }
+  }
+}
+
+.project-win {
+  p {
+    margin-bottom: 3rem;
+  }
+
+  img {
+    margin-bottom: 2rem;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

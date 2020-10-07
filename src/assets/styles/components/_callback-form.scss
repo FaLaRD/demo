@@ -1,0 +1,118 @@
+.callback-form {
+  &__heading {
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+
+    @media (min-width: $md) {
+      font-size: 3.2rem;
+    }
+
+    &::after {
+      content: '';
+      width: calc(100% + 6rem);
+      height: 0;
+      border-top: 1px solid #F2F3F6;
+      position: absolute;
+      left: -3rem;
+      top: 100%;
+    }
+  }
+
+  &__main {}
+
+  &__field {
+    margin-bottom: 1rem;
+  }
+
+  &__caption {
+    color: #1A295B;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &__input  {
+    background: #F5F6F8;
+    width: 100%;
+    border: 1px solid #E7E9F0;
+    color: $primary-color;
+    padding: 1.2rem 2rem;
+    color: $primary-color;
+    outline: none;
+    font-size: 1.5rem;
+    transition: all .3s;
+    box-shadow: inset 0px 1px 3px rgba(35, 52, 107, 0.05);
+    border-radius: .3rem;
+
+    &:hover {
+      border-color: mix($black, #F5F6F8, 25%);
+    }
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder  {
+    color: $white;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    @media (min-width: $md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .checkbox-label {
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
+
+    @media (min-width: $md) {
+      margin-bottom: 0;
+    }
+
+    &__main {
+      color: #f00;
+      font-size: 1.2rem;
+      opacity: .8;
+      color: #4F5D89;
+
+      a {
+        text-decoration: underline;
+        color: #4F5D89;
+
+        &:hover {
+          color: #4F5D89;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    border-color: $white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: 15rem;
+    width: 100%;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    @media (min-width: $md) {
+      width: auto;
+    }
+  }
+}

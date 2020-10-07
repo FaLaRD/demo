@@ -1,0 +1,164 @@
+// ************************
+// | Template main colors |
+// ************************
+// Brand Color Palette
+$primary-color: #23346B !default;
+$secondary-color: #B52528 !default;
+$tertiary-color: tomato !default;
+
+// Useful dark colors
+$white: #ffffff !default;
+$black: #000000 !default;
+$dark: #333333 !default;
+$dark--medium: #9a9a9a !default;
+$dark--light: #9a9a9a !default;
+$dark--thin: #9a9a9a !default;
+
+// Useful gray colors
+$gray: #cccccc !default;
+$gray--medium: #e6e6e6 !default;
+$gray--light: #f7f7f7 !default;
+$gray--thin: #fafafa !default;
+
+// Alert colors
+$error: #EF7373;
+$error--thin: #D13C3C;
+$warning: #FFB643;
+$warning--thin: #F39C11;
+$success: #93D747;
+$success--thin: #5D9A19;
+
+// ***************
+// | Base styles |
+// ***************
+$body-bg: #FFFFFF !default;
+$layout-max-width: 1334px !default;
+
+$spacer: 1rem;
+
+// z-indexes
+$baseZIndex: 3 !default;
+$flowZIndex: 11 !default;
+$dropdownZIndex: 55 !default;
+$dropdownAboveZIndex: 77 !default;
+$overlayZIndex: 101 !default;
+$overlayAboveZIndex: 111 !default;
+
+// Breakpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+
+$xs--mw: 479px;
+$sm--mw: 575px;
+$md--mw: 767px;
+$lg--mw: 991px;
+$xlg--mw: 1199px;
+
+// **************
+// | Typography |
+// **************
+// Base fonts stack
+$font-base-weight: 400 !default;
+$font-base-stack: 'SF UI Display', Helvetica, Arial, sans-serif !default;
+$font-base-size: 1.5rem !default;
+$font-base-color: #08172d !default;
+$base-line-height: 1.5 !default;
+
+// Headings
+$headings-weight: 500 !default;
+$headings-fonts-stack: 'SF UI Display', Helvetica, Arial, sans-serif !default;
+$headings-color: $primary-color !default;
+$headings-line-height: 1.1 !default;
+
+$subheading-color: #343434 !default;
+
+// link colors
+$link-color-normal: #4AA6E3 !default;
+$link-color-visited: #9964C7 !default;
+$link-color-hover: #7ACE4C !default;
+
+// ********************************************
+// | Buttons                                  |
+// ********************************************
+// Btn Base
+$btn-color: $white !default;
+$btn-color-disabled: #A3A3A3 !default;
+$btn-radius: 2.5rem !default;
+
+// Btn Primary
+$btn-primary-color: $btn-color !default;
+$btn-primary-bg: $primary-color !default;
+$btn-primary-hover: $secondary-color !default;
+$btn-primary-active: mix(black, $secondary-color, 20%) !default;
+$btn-primary-disabled: #DBDBDB !default;
+
+// Btn Secondary
+$btn-secondary-color: $white !default;
+$btn-secondary-bg: mix(black, $secondary-color, 20%) !default;
+$btn-secondary-hover: mix($black, $secondary-color, 11%) !default;
+
+// Btn Tertiary
+$btn-tertiary-color: $white !default;
+$btn-tertiary-bg: $tertiary-color !default;
+$btn-tertiary-hover: mix($black, $tertiary-color, 11%) !default;
+
+// Btn Gray
+$btn-gray-color: $btn-color !default;
+$btn-gray-bg: #EFEFEF !default;
+$btn-gray-hover: #CCCCCC !default;
+$btn-gray-active: #E0E0E0 !default;
+$btn-gray-disabled: #EFEFEF !default;
+
+// Btn Grad
+$btn-grad-bg: linear-gradient(to right, #ff5e4a 0%, #ffc544 100%) !default;
+$btn-grad-color: $white !default;
+$btn-grad-hover: #ff5e4a !default;
+
+// Btn Statusses
+$btn-danger-bg: #ff3000 !default;
+$btn-danger-color: $white !default;
+$btn-danger-hover: mix(black, $btn-danger-bg, 11%) !default;
+
+// Icons
+$btn-icon-fill-color: #ffffff !default;
+
+// *********
+// | Forms |
+// *********
+$input-font-size: 1.7rem;
+
+$input-placeholder-color: #BDBEB7;
+$input-typing-color: #222222;
+
+$input-border-normal: #EFEFEF;
+$input-border-hover: #CCCCCC;
+$input-border-focus: #7ACE4C;
+
+$input-border-radius: .4rem;
+
+$input-focus-shadow: 0 0 1.5rem rgba($input-border-focus, 0.2);
+
+// **********
+// | Header |
+// **********
+
+
+// **********
+// | Footer |
+// **********
+
+
+// ************
+// | Main Nav |
+// ************

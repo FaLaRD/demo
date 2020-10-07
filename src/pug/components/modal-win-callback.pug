@@ -1,0 +1,22 @@
+.modal-win-body(data-modal-win="callback")
+  +b.callback-form
+    +e.heading Оставить заявку на обучение проектных команд
+    +e.FORM.main(action="/" name="callback" method="POST")
+      +e.field
+        +e.LABEL.caption(for="u-name") Введите ФИО*:
+        +e.INPUT.input(type="text" name="user-name" id="u-name")
+      +e.field
+        .row
+          .col-sm-6
+            +e.field
+              +e.LABEL.caption(for="u-phone") Номер телефона*:
+              +e.INPUT.input(type="tel" name="user-phone" id="u-phone")
+          .col-sm-6
+            +e.field
+              +e.LABEL.caption(for="u-email") E-mail*:
+              +e.INPUT.input(type="email" name="user-email" id="u-email")
+      +e.summary
+        +b.checkbox-label
+          +e.INPUT.input(type="checkbox" name="privacy" id="user-agreement")
+          +e.LABEL.main(for="user-agreement") Нажимая на кнопку “Сохранить” вы подтверждаете что ознакомлен(-ы) с #[a(href="#" target="_blank") политикой конфиденциальности] и даёте согласие на обработку персональных данных согласно ФЗ №54
+        +e.INPUT.btn.btn--primary(type="submit" name="send-data" value="Отправить")

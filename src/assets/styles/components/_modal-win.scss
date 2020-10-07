@@ -1,0 +1,89 @@
+.modal-win {
+  $self: &;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: opacity .3s, transform .3s;
+  z-index: $overlayAboveZIndex;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: rgba($black, .5);
+
+  + .modal-win {
+    background: rgba($black, .35);
+  }
+
+  &__main {
+    padding: 3rem 4rem;
+    background: $white;
+    margin: 8rem auto;
+    position: relative;
+    width: 92%;
+
+    opacity: 0;
+    transition: opacity 1s;
+    animation: fadeOut .25s;
+    border-radius: .3rem;
+    box-shadow: -.2rem .4rem 4rem rgba(35, 52, 107, 0.05);
+
+    @media (min-width: $md) {
+      max-width: 64rem;
+      width: 100%;
+    }
+
+    &.is-modal-win-opened  {
+      animation: .3s scaleIn forwards;
+      opacity: 1;
+    }
+
+    &--wide {
+      max-width: 115rem;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    padding: 0;
+    border: none;
+    background: none;
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    margin-left: 2rem;
+    left: 100%;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+      //transform: rotate(90deg);
+    }
+
+    &:hover &-icon {
+      fill: $white;
+    }
+
+    &-icon {
+      fill: $gray;
+      max-width: 1.6rem;
+      max-height: 1.6rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .3s;
+      cursor: pointer;
+    }
+  }
+}
+
+body.is-modal-opened {
+  overflow: hidden;
+}
+
+body > [data-modal-win] {
+  display: none;
+}
